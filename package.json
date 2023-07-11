@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "build": "npm build"
+    "dev": "concurrently \"npm start\" \"npm run client\"",
+    "build": "npm build",
+    "server": "nodemon server.js",
+    "arabic": "npm start --prefix ./arabic"
+    
   },
   "keywords": [],
   "author": "",
